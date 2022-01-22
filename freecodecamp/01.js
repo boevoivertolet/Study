@@ -1,3 +1,2 @@
-//boevoivertolet
-/* boevoi
-vertolet*/
+var myFirstName = "boevoi";
+var myLastName = "vertolet";
