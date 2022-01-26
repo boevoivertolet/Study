@@ -1,11 +1,10 @@
 var myFirstName = "boevoi";
 var myLastName = "vertolet";
-// Variable declarations
+
 var studlyCapVar;
 var properCamelCase;
 var titleCaseOver;
 
-// Variable assignments
 studlyCapVar = 10;
 properCamelCase = "A String";
 titleCaseOver = 9000;
@@ -41,4 +40,5 @@ const product = 2.0 * 2.5;
 
 const quotient = 4.4 / 2.0; // Change this line
 
-const remainder = 11 % 3;\const myStr = "FirstLine\n\t\\SecondLine\n\ThirdLine";
+const remainder = 11 % 3;
+const myStr = "FirstLine\n\t\\SecondLine\n\ThirdLine";
