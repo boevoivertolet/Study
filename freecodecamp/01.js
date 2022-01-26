@@ -45,3 +45,7 @@ const myStr = "FirstLine\n\t\\SecondLine\n\ThirdLine";
 
 const myName = "myName ";
 const myStr = "My name is " + myName + "and I am well! ";
+
+const someAdjective = "someAdjective ";
+let myStr = "Learning to code is ";
+myStr += someAdjective;
