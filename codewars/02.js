@@ -63,3 +63,7 @@ function numberToString(num) {
  function booleanToString(b){
   return String(b);
 }
+var stringToNumber = function(str){
+  // put your code here
+  return Number(str);
+}
