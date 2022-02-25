@@ -57,3 +57,6 @@ function answer3(){
   return "yes";
 }
 
+function numberToString(num) {
+ return String(num);
+ }

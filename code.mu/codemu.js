@@ -1,7 +1,8 @@
 "use strict"
+let arr = [];
 
-let arr = [2, 5, 3, 9];
+arr[3] = 'a';
+arr[8] = 'b';
 
+console.log(arr.length);
 
-
-console.log (arr[0]*arr[1]+arr[2]*arr[3]);
