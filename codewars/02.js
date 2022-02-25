@@ -60,3 +60,6 @@ function answer3(){
 function numberToString(num) {
  return String(num);
  }
+ function booleanToString(b){
+  return String(b);
+}
