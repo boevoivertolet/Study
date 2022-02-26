@@ -49,3 +49,7 @@ const myStr = "My name is " + myName + "and I am well! ";
 const someAdjective = "someAdjective ";
 let myStr = "Learning to code is ";
 myStr += someAdjective;
+function functionWithArgs(param1, param2) {
+    console.log(param1, param2);
+  }
+  functionWithArgs()

@@ -67,3 +67,6 @@ var stringToNumber = function(str){
   // put your code here
   return Number(str);
 }
+function animal(obj){
+  return 'This '+obj.color+' '+obj.name+' '+'has '+obj.legs+' legs.';
+}

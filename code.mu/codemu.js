@@ -1,8 +1,8 @@
 "use strict"
-let arr = [];
+let test = 10;
 
-arr[3] = 'a';
-arr[8] = 'b';
-
-console.log(arr.length);
-
+if (test !== 10) {
+	alert('верно');
+} else {
+	alert('неверно');
+}
