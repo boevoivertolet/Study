@@ -1,4 +1,4 @@
 "use strict"
-let test = 0;
-if (test) console.log('true'); else console.log('false');
+let test = 1;
+if(test) alert('true');
 
