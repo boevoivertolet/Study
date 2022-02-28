@@ -1,9 +1,8 @@
 "use strict"
-let test1 = 3;
-let test2 = 3;
+let num = 1
 
-if (test1 === test2) {
-	alert('верно');
-} else {
-	alert('неверно');
+if (num >0 && num <5){
+	console.log('true');
+}else{
+	console.log('false');
 }
