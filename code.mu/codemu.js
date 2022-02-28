@@ -1,8 +1,7 @@
 "use strict"
-let num1 = -5;
-let num2 = 15;
+let test = true;
 
-if (num1 >=0 || num2 >= 0){
+if (!test) {
 	console.log('true');
 }else{
 	console.log('false');
