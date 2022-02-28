@@ -1,7 +1,7 @@
 "use strict"
-let num = 1
+let num = 11
 
-if (num >0 && num <5){
+if (num >=10 && num <=20){
 	console.log('true');
 }else{
 	console.log('false');
