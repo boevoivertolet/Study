@@ -1,8 +1,4 @@
 "use strict"
-let test = true;
+let test = 0;
+if (test) console.log('true'); else console.log('false');
 
-if (!test) {
-	console.log('true');
-}else{
-	console.log('false');
-}
