@@ -1,19 +1,17 @@
 "use strict"
 
 
-let age = 24;
-let result =true;
+let min = 16;
 
-if (age >= 18) {
-	let result;
-
-	if (age <= 23) {
-		result = 'от 18 до 23';
-	} else {
-		result = 'больше 23';
-	}
-} else {
-	result = 'меньше 18';
+if (min >= 0 && min <= 19) {
+	console.log('1 треть');
 }
 
-console.log(result);
+if (min >= 20 && min <= 39) {
+	console.log('2 треть');
+}
+
+if (min >= 40 && min <= 59) {
+	console.log('3 треть');
+}
+
