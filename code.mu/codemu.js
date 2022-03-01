@@ -1,12 +1,10 @@
 "use strict"
+/*Как известно, четные числа делятся на 2 без остатка, а нечетные - с остатком. Пусть у вас дано число.
+С помощью оператора % и конструкции if проверьте четное это число или нет.*/
 
-
-let num = 123453;
-let last = String(num)[String(num).length -1];
-
-	if (last == 0 || last == 2 || last == 4 || last == 6 || last == 8) {
-	console.log('чет');
-	} else {
-	console.log('нечет');
+let a =10
+	if (a%2 ==0){
+		console.log('чёт');
+	}else{
+		console.log('нечет');
 	}
-
