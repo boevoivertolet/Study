@@ -1,7 +1,12 @@
 "use strict"
-let human={'1name': 'Ulya', surname: 'Pisya', age: 42, height: 1.73, weight: 97};
-let indexmt = human.weight/human.height**2;
-let fullAge = 'age';
-let str = human['1name']+' '+human.surname;
+let num = 3;
 
-console.log (str+' '+human[fullAge]+' '+indexmt);
+if (num >= 0) {
+	if (num <= 5) {
+		alert('меньше или равно 5');
+	} else {
+		alert('больше 5');
+	}
+} else {
+	alert('меньше нуля');
+}

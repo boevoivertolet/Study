@@ -1,12 +1,18 @@
 "use strict"
-let day = 15;
-
-if (day >= 1 && day <10) {
-	alert('1 dekada');
-} else if (day >= 10 && day <20) {
-	alert('2 dekada');
-} else if (day >= 20 && day<=31){
-	alert('3 dekada');
-} else if (day>1 && day>31){
-	alert('error');
-}
+let num = 98;
+let sum = ((num-num % 10)/10)+(num % 10);
+	if (num > 10 && num <99)
+	{
+		if (sum <= 9)
+		{
+			console.log('Сумма цифр однозначна');
+		}
+		else
+		{
+			console.log('сумма цифр двузначна');
+		}
+	}
+	else
+	{
+		console.log('вне диапозона');
+	}
