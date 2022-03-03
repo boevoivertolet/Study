@@ -1,14 +1,15 @@
 "use strict"
-/*Накопление результата в цикле JavaScript
-Задача 3
-Найдите сумму нечетных чисел от 1 до 99.*/
+/*Цикл for для массивов в JavaScript
+Задача 1
+Дан массив с элементами 'a', 'b', 'c', 'd', 'e'. С помощью цикла for выведите все эти элементы на экран.*/
 
 
 
 
-let sum = 0;
-	for (let i = 1; i <= 100; i += 2)
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+	for (let i = 0; i < arr.length; i++)
 	{
-		sum = sum + i;
+		console.log(arr[i]);
 	}
-		console.log(sum);
+
