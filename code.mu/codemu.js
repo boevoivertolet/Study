@@ -1,12 +1,14 @@
 "use strict"
-/*Цикл for в JavaScript
-Задача 5
-С помощью цикла for выведите в консоль числа от 100 до 0.*/
+/*Накопление результата в цикле JavaScript
+Задача 1
+Найдите произведение целых чисел от 1 до 20.*/
 
 
 
 
-for (let i = 100; i >= 0; i--)
+let mult = 0;
+	for (let i = 1; i <= 20; i++)
 	{
-		console.log(i);
+		mult = mult + i;
 	}
+		console.log(mult);
