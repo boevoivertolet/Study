@@ -1,19 +1,5 @@
 'use strict'
-
-/*Вас попросили написать JavaScript-код для автоматической
-системы управления кинотеатром. Задача состоит в том,
-чтобы опре делить, пускать ли зрителя на фильм «с 12 лет
-и старше» или нет.
-Правила таковы: если посетителю 12 лет или больше,
-он может проходить. Если ему еще не исполнилось 12, но его
-сопровождает взрослый, пусть тоже проходит. Во всех
-остальных случаях вход запрещен.*/
-
-
-var age = 11;
-var accompanied = true;
-var enterAge;
-enterAge === age >= 12 || age < 12 + accompanied;
+/* Генератор случайных дразнилок*/
 
 
 
@@ -21,4 +7,17 @@ enterAge === age >= 12 || age < 12 + accompanied;
 
 
 
+var randomBodyParts = ["глаз", "нос", "череп"];
+var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+// Выбор случайной части тела из массива randomBodyParts:
+var randomBodyPart = randomBodyParts[Math.floor(Math.random() * 3)];
+// Выбор случайного прилагательного из массива randomAdjectives:
+var randomAdjective = randomAdjectives[Math.floor(Math.random() * 3)];
+// Выбор случайного слова из массива randomWords:
+var randomWord = randomWords[Math.floor(Math.random() * 5)];
+// Соединяем случайные строки в предложение:
+var randomInsult = "У тебя " + randomBodyPart + " словно " +randomAdjective + " " + randomWord + "!!!";
+
+    console.log(randomInsult);
 
