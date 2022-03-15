@@ -1,13 +1,27 @@
 'use strict'
 /*УПРАЖНЕНИЯ
-#1. Прекрасные животные
-Напишите цикл for, который изменяет массив животных, делая
-их прекрасными! Например, если есть следующий массив:*/
+#2. Генератор случайных строк
+Напишите генератор случайных строк. Для этого вам понадо-
+бится строка со всеми буквами алфавита:*/
+
+
+var i = 0;
+var alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+var indexRandomLet;
+var randomString = '';
+
+while(i < 6){
+    randomString += alphabet[Math.floor(Math.random(alphabet) * alphabet.length)];
+    i++;
+}
 
 
 
-var animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
-    for (var i = 0; i < animals.length; i++ ){
-        animals[i] =  (animals[i] + ' Прекрасное животное');
-    }
-console.log(animals);
+console.log(randomString);
+
+
+
+
+
+
+
