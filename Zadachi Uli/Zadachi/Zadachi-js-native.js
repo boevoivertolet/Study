@@ -262,22 +262,40 @@ const studentsMarksSum = (studentRecords) => {
 studentsMarksSum(studentRecords);
 
 //9. Добавить всем студентам свойство isStupid со значением false (map)
-const addAllStudentsKeyIsStupidWithValueFalse = (studentRecords) => {
-    let stupidFalse = studentRecords.map(student => ({...student, isStupid: false}))
-    console.log(stupidFalse)
-}
-addAllStudentsKeyIsStupidWithValueFalse(studentRecords);
+
+let stupidFalse = studentRecords.map(student => ({...student, isStupid: false}))
+console.log(stupidFalse)
 
 
 //10. Изменить в предыдущем массиве у студента 'yaga' свойство isStupid на true (map)
-//11. Отфильтровать массив студентов оставив только тех у кого isStupid = false (filter)
-//12. Получить массив объектов студентов, в котором каждому студенту прибавили 20 баллов (map)
-//13. Получить массив объектов студентов с id < 150 (filter)
+const stupidYaga = stupidFalse.map(student => student.name ==='yaga' ? {...student, isStupid: true} : student)
+console.log(stupidYaga)
 
+//11. Отфильтровать массив студентов оставив только тех у кого isStupid = false (filter)
+let studentsIsStupedFalse =stupidYaga.filter(student => student.isStupid === false)
+console.log(studentsIsStupedFalse);
+//12. Получить массив объектов студентов, в котором каждому студенту прибавили 20 баллов (map)
+
+let studentIncr20Marks = stupidYaga.map(s => ({...s, marks: s.marks+20}))
+
+console.log(studentIncr20Marks);
+
+
+//13. Получить массив объектов студентов с id < 150 (filter)
+let studentsIdLow150 = stupidYaga.filter(s => s.id < 150)
+console.log(studentsIdLow150);
 //Теперь будем применять несколько методов сразу
 
-//14. Получить массив с именами студентов, набравших 50 баллов (filter и map)
+
+//14. Получить массив с именами студентов, набравших больше 50 баллов (filter и map)
+let students50MarksMore = stupidYaga.filter(s=> s.marks >=50).map(s=>s.name)
+console.log(students50MarksMore);
+
+
 //15. Получить массив объектов со студентами, у которых будет 70+ баллов после того как каждому докинут 10 балоов (map и filter)
+let students70MarksLowBeforInc10Marks = stupidYaga.map(student => ({...student, marks: student.marks +10})).filter(student => student.marks > 70)
+
+console.log(students70MarksLowBeforInc10Marks);
 
 
 
