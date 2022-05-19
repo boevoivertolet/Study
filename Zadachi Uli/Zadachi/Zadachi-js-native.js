@@ -1,3 +1,4 @@
+/*
 const students = [
     {
         name: "Bob",
@@ -36,6 +37,7 @@ const students = [
         scores: 105
     },
 ];
+*/
 
 const arrayStringNumber = [-1, 'asda1', 4, '3', 'bsd', 26, 'csdj2', -21, 'dsd', 211, 'esdasdasdasd', -8, 'fsfd', 233, 'gsdg3', -1121, 0, -0, '',]
 const filteredNumbers = arrayStringNumber.filter(el => typeof el === 'number')
@@ -133,7 +135,7 @@ multiplyQudroFn(filteredNumbers);
 //3. Написать функцию, которая принимает массив чисел и возвращает массив чисел с обратным знаком (четные стали нечетными и наоборот)
 //Вызвать функцию несколько раз с разными массивами.
 const reversEvenFn = (filteredNumbers) => {
-    const revers = filteredNumbers.map(el => (el + 1)* -1)
+    const revers = filteredNumbers.map(el => (el + 1) * -1)
     console.log(revers)
 }
 reversEvenFn(filteredNumbers);
@@ -169,20 +171,21 @@ const evenMultoddDegreeFn = (filteredNumbers) => {
 evenMultoddDegreeFn(filteredNumbers);
 
 
-const evenMultoddDegreeFn2 =(filteredNumbers) => {
+const evenMultoddDegreeFn2 = (filteredNumbers) => {
     filteredNumbers.map(el => {
-        if (el % 2 === 0) {
-            return el * 2;
+            if (el % 2 === 0) {
+                return el * 2;
+            } else {
+                return el / 2
+            }
         }
-        else {
-            return el / 2
-        }
-    }
-)}
+    )
+}
 evenMultoddDegreeFn2(filteredNumbers);
 
-const evenMultoddDegreeFn3 =(filteredNumbers) => {
-    filteredNumbers.map(el => el % 2 === 0 ? el * 2 : el / 2)}
+const evenMultoddDegreeFn3 = (filteredNumbers) => {
+    filteredNumbers.map(el => el % 2 === 0 ? el * 2 : el / 2)
+}
 evenMultoddDegreeFn3(filteredNumbers);
 
 let studentRecords = [
@@ -199,7 +202,7 @@ console.log(copyStudentRecords)
 
 
 //2. Сделать глубокую копию массива studentRecords
-let deepCopyStudentRecords = studentRecords.map(el=>({...el}))
+let deepCopyStudentRecords = studentRecords.map(el => ({...el}))
 console.log(deepCopyStudentRecords)
 
 //Далее все задания делаем как на самостоятельной, не изменяя исходный массив - записываем в новую переменную и консолим!!!!
@@ -214,7 +217,7 @@ upperLetFn(studentRecords);
 const upperLetFn2 = (studentRecords) => {
     const upperCase = studentRecords.map(el => {
         let arr = el.name.split('');
-        arr[0]=arr[0].toUpperCase()
+        arr[0] = arr[0].toUpperCase()
         return arr.join('')
     })
     console.log(upperCase)
@@ -223,32 +226,51 @@ upperLetFn2(studentRecords);
 
 //4. Получить массив объектов со студентами, набравшими более 50 баллов (filter)
 const moreFiftyDetector = (studentRecords) => {
-    const top =studentRecords.filter(el => el.marks > 50)
+    const top = studentRecords.filter(el => el.marks > 50)
     console.log(top)
 }
 moreFiftyDetector(studentRecords);
 
 //5. Отсортировать массив из задания 2 в алфавитном порядке по имени (sort)
-deepCopyStudentRecords.sort((a,b)=> a.name > b.name ? 1 : -1)
+deepCopyStudentRecords.sort((a, b) => a.name > b.name ? 1 : -1)
 console.log(deepCopyStudentRecords)
 
 //6. Получить массив объектов с самым лучшим и самым худшим студентами (filter)
 const topLowStudentsFn = (studentRecords) => {
-    studentRecords.sort((a,b)=> a.marks > b.marks ? 1 : -1)
-   const topSt = studentRecords.filter(el=> (studentRecords.indexOf(el) === 0 || studentRecords.indexOf(el) === studentRecords.length-1))
+    studentRecords.sort((a, b) => a.marks > b.marks ? 1 : -1)
+    const topSt = studentRecords.filter(el => (studentRecords.indexOf(el) === 0 || studentRecords.indexOf(el) === studentRecords.length - 1))
     console.log(topSt)
 }
 topLowStudentsFn(studentRecords);
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //7. Получить массив объектов студентов, набравших более 50 баллов и имеющих id больше 120 (filter)
-
+const arrayStudentsMarksMore50IdMore120 = (studentRecords) => {
+    let smid = studentRecords.filter(student => student.marks > 50).filter(student => student.id > 120)
+    console.log(smid);
+}
+arrayStudentsMarksMore50IdMore120(studentRecords);
 
 
 //8. Получить общую сумму баллов студентов (reduce)
+const studentsMarksSum = (studentRecords) => {
+    let marksSum = studentRecords.reduce((sum, stu) => {
+        return sum + stu.marks
+    }, 0)
+    console.log(marksSum)
+}
+studentsMarksSum(studentRecords);
+
 //9. Добавить всем студентам свойство isStupid со значением false (map)
+const addAllStudentsKeyIsStupidWithValueFalse = (studentRecords) => {
+    let stupidFalse = studentRecords.map(student => ({...student, isStupid: false}))
+    console.log(stupidFalse)
+}
+addAllStudentsKeyIsStupidWithValueFalse(studentRecords);
+
+
 //10. Изменить в предыдущем массиве у студента 'yaga' свойство isStupid на true (map)
-//11. Отфильтровать массив студентов оствив только тех у кого isStupid = false (filter)
+//11. Отфильтровать массив студентов оставив только тех у кого isStupid = false (filter)
 //12. Получить массив объектов студентов, в котором каждому студенту прибавили 20 баллов (map)
 //13. Получить массив объектов студентов с id < 150 (filter)
 
